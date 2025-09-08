@@ -15,7 +15,10 @@ public class AutomateCalc {
     public static void main(String[] args) throws MalformedURLException, InterruptedException {
         // Gather Desired capabilities
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName", "SM-305F");
+        
+        String deviceId = "YOUR_DEVICE_ID"; // Replace with the actual device ID from adb devices
+
+        capabilities.setCapability("deviceName", deviceId);
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("automationName", "uiautomator2");
         capabilities.setCapability("platformVersion", "11.0");
